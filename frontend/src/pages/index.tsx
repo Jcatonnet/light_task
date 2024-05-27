@@ -1,10 +1,14 @@
-// NOTE: the frontend server provides a proxy to the backend on the /api route
-// see: next.config.js if you need to change this
+import InvoiceForm from "@/components/InvoiceForm";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>TODO</p>
+    <main className="flex min-h-screen flex-col items-center p-24">
+      <div className="border-2 border-primary bg-tertiary rounded-xl p-8">
+        <h1 className="text-4xl font-bold text-primary mb-8">
+          Invoice Approval
+        </h1>
+        <InvoiceForm />
+      </div>
     </main>
-  )
+  );
 }
