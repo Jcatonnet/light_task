@@ -1,6 +1,10 @@
 import { workflows } from "../models/workflow.js";
+import { Condition, WorkflowParams } from "../types/workflow.js";
 
-const checkCondition = (condition, { amount, department, managerApproval }) => {
+const checkCondition = (
+  condition: Condition,
+  { amount, department, managerApproval }: WorkflowParams
+) => {
   switch (condition.type) {
     case "amount":
       if (condition.operator === ">=") {
@@ -10,7 +14,7 @@ const checkCondition = (condition, { amount, department, managerApproval }) => {
       }
       break;
     case "department":
-      return department.toLowerCase() === condition.department.toLowerCase();
+      return department.toLowerCase() === condition.department!.toLowerCase();
     case "managerApproval":
       return managerApproval === condition.managerApproval;
     default:
@@ -18,7 +22,11 @@ const checkCondition = (condition, { amount, department, managerApproval }) => {
   }
 };
 
-const processWorkflow = ({ amount, department, managerApproval }) => {
+const processWorkflow = ({
+  amount,
+  department,
+  managerApproval,
+}: WorkflowParams): string => {
   const workflow = workflows[0];
 
   for (const condition of workflow.conditions) {

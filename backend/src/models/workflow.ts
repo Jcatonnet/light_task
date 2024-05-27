@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
+import { Workflow } from "../types/workflow.js";
 
-const workflows = [
+const workflows: Workflow[] = [
   {
     id: uuidv4(),
     name: "Default Workflow",

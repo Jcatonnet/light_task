@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import workflowRoutes from "./src/routes/workflowRoutes.js";
+import workflowRoutes from "./routes/workflowRoutes.js";
 
 const app = express();
 app.use(bodyParser.json());

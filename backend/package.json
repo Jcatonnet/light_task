@@ -1,10 +1,11 @@
 {
   "name": "backend-node",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "dist/server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
+    "build": "tsc",
+    "dev": "nodemon --exec node --loader ts-node/esm src/server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -14,9 +15,15 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@eslint/js": "^8.8.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "@types/uuid": "^9.0.8",
     "eslint": "^8.8.0",
     "eslint-plugin-node": "^11.1.0",
     "globals": "^13.10.0",
-    "@eslint/js": "^8.8.0"
+    "ts-node": "^10.9.2",
+    "nodemon": "^2.0.15",
+    "typescript": "^5.4.5"
   }
 }
