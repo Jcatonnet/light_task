@@ -31,7 +31,10 @@ In a real world scenario we would:
 
 - Define more type for departments
 - Connect APi to third party tools
--
+- USe ReactFromHook for more robust form
+- use context/state manager to handle input (e.g Redux)
+- Error handling for the form
+- Loaders
 
 ### How to build & run
 
