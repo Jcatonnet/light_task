@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { Workflow } from "../types/workflow.js";
+import { Workflow, Invoice } from "../types/workflow.js";
 
 const workflows: Workflow[] = [
   {
@@ -49,4 +49,6 @@ const workflows: Workflow[] = [
   },
 ];
 
-export { workflows };
+const invoices: Invoice[] = [];
+
+export { workflows, invoices };

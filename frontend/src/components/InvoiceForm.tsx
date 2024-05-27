@@ -42,7 +42,7 @@ const InvoiceForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
       <div>
         <label className="block text-sm font-medium text-secondary">
-          Amount:
+          Amount in $:
         </label>
         <input
           type="text"

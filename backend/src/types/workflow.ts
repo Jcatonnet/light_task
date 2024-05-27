@@ -25,3 +25,12 @@ export interface WorkflowParams {
   department: string;
   managerApproval: boolean;
 }
+
+export interface Invoice {
+  id: string;
+  amount: number;
+  department: string;
+  managerApproval: boolean;
+  status: "pending" | "approved" | "rejected";
+  createdAt: string;
+}
